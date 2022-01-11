@@ -1,0 +1,336 @@
+/*=================== Header style ======================*/
+header {
+  background-color: #ffffff;
+  height: 67px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  display: flex;
+  // box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid #f1f1f1;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  @media only screen and (max-width: $lg) {
+    height: 47px;
+  }
+  .logo {
+    width: 200px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    height: 67px;
+    line-height: 45px;
+    float: left;
+
+    background-color: $blueColor;
+    @media only screen and (max-width: $lg) {
+      height: 47px;
+      width: 70px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .menu-icon {
+    padding: 20px 0px;
+    text-align: center;
+    width: 58px;
+    float: left;
+    display: block;
+
+    background-color: $primaryColor;
+    @media only screen and (max-width: $lg) {
+      padding: 0px 0px;
+      width: 47px;
+      height: 47px;
+      line-height: 52px;
+    }
+
+    .fa {
+      color: $whiteColor;
+
+      font: {
+        size: em(24px);
+      }
+      @media only screen and (max-width: $lg) {
+        font-size: em(18px);
+      }
+    }
+    &:hover {
+      background-color: $primaryHoverColor;
+    }
+  }
+
+  .header-nav {
+    float: right;
+    padding: 14px 13px;
+    margin-left: auto;
+    @media only screen and (max-width: $lg) {
+      top: 7px;
+      right: 5px;
+      position: absolute;
+    }
+    .fa {
+      color: $grayColor;
+    }
+    @media only screen and (max-width: $lg) {
+      padding: 0;
+    }
+    & > div {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 15px;
+      @media only screen and (max-width: $lg) {
+        margin: 0 5px;
+      }
+    }
+    .btn-primary {
+      height: 30px;
+      line-height: 32px;
+      margin: 0px 5px;
+    }
+    .user {
+      position: relative;
+      .dropdown-toggle {
+        cursor: pointer;
+        &:after {
+          display: none;
+        }
+      }
+      > a {
+        font-size: em(14px);
+        color: $grayColor;
+        display: inline-block;
+        img {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 50%;
+          @media only screen and (max-width: $lg) {
+            width: 32px;
+            height: 32px;
+          }
+        }
+        .fa.fa-angle-down {
+          vertical-align: middle;
+          font-weight: bold;
+          margin-left: 5px;
+          font-size: em(16px);
+        }
+      }
+    }
+
+    .notificatin {
+      position: relative;
+      .dropdown-toggle {
+        cursor: pointer;
+        &:after {
+          display: none;
+        }
+      }
+
+      @media (max-width: $sm) {
+        position: static;
+      }
+      img {
+        @media (max-width: $sm) {
+          width: 20px;
+        }
+      }
+      .dropdown-menu {
+        // left: auto !important;
+        right: -40px;
+        border-radius: 0px;
+        top: 22px !important;
+        border: solid 1px #eeeeee;
+        width: 250px;
+        padding: 0px;
+        max-height: 250px;
+        box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        @media (max-width: $lg) {
+          right: 0px !important;
+          top: 12px !important;
+          left: 5px !important;
+          width: 100vw;
+        }
+        @media (max-width: 1025px) {
+          overflow: auto;
+        }
+
+        & > span,
+        .mCSB_container > span {
+          background-color: $primaryColor;
+          color: #fff;
+          padding: 20px;
+          font-family: $ProximaNovaSB;
+          display: block;
+          padding: 7px 15px;
+        }
+        li {
+          border-bottom: solid 1px $borderColor;
+          position: relative;
+          padding-left: 60px;
+          &:before {
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: "";
+            width: 37px;
+            height: 37px;
+            border-radius: 50%;
+            background-color: #e2dfd6;
+            font: normal normal normal 14px/1 FontAwesome;
+          }
+          a {
+            display: inline-block;
+            padding: 10px;
+            font-size: em(13px);
+            line-height: 20px;
+            & > span {
+              display: block;
+              color: $lightGrayColor;
+            }
+          }
+          &.approved {
+            &:before {
+              content: "\f00c";
+              color: $darkGerrnColor;
+            }
+          }
+          &.rejected {
+            &:before {
+              content: "\f00d";
+              color: $redColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  .payout-section {
+    display: inline-block;
+    border-left: 1px solid #5a7694;
+    font-size: em(12px);
+    line-height: 16px;
+    padding: 0 15px;
+    vertical-align: middle;
+    color: #5a7694;
+    font-family: $ProximaNovaB;
+    strong {
+      display: block;
+      color: #000;
+      font-family: $ProximaNovaSB;
+    }
+    @media (max-width: $lg) {
+      position: absolute;
+      top: 47px;
+      padding-right: 0;
+      padding-left: 5px;
+      right: 0;
+    }
+  }
+}
+
+.top-search {
+  * {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+  }
+  width: calc(100% - 652px);
+  @media only screen and (max-width: $lg) {
+    width: 100%;
+    padding: 5px;
+    background-color: #efefef;
+  }
+  .search-panel a {
+    padding: 5px 10px;
+    display: block;
+    border-bottom: solid 1px #efefef;
+  }
+  .dropdown-toggle {
+    width: 150px;
+    text-align: left;
+    background-color: #08929f;
+    color: $whiteColor;
+
+    border-radius: 3px 0 0 3px;
+    position: relative;
+    height: 38px;
+    &:after {
+      content: "\f107";
+      font: normal normal normal 14px/1 FontAwesome;
+      border: 0 !important;
+      position: absolute;
+      top: 12px;
+      right: 20px;
+    }
+  }
+  .search_input {
+    position: relative;
+    width: 100%;
+    @media only screen and (max-width: $lg) {
+      width: calc(100% - 96px);
+    }
+    .fa-search {
+      position: absolute;
+      color: #4b4b4b;
+      top: 36%;
+      left: 30px;
+      @media only screen and (max-width: $lg) {
+        top: 23%;
+        left: 8px;
+      }
+    }
+    .form-control {
+      border: solid 0px #ebebeb !important;
+      height: auto;
+      padding: 20px 20px 20px 60px !important;
+      border-radius: 0 3px 3px 0 !important;
+      color: #4b4b4b;
+      @media only screen and (max-width: $lg) {
+        padding: 5px 10px 5px 30px !important;
+      }
+    }
+  }
+}
+
+.user-dropdown {
+  top: 12px !important;
+  padding: 10px !important;
+  border-radius: 0px;
+  border: solid 1px #eeeeee;
+  box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.1);
+  @media only screen and (max-width: $lg) {
+    top: 5px !important;
+  }
+  li {
+    a {
+      display: block;
+      border-bottom: solid 1px #ddd;
+      color: $grayColor;
+      font-size: em(13px);
+      padding: 5px;
+      .fa {
+        margin-right: 5px;
+      }
+      &:hover {
+        background-color: #efefef;
+      }
+    }
+    &:last-child {
+      a {
+        border-bottom: solid 0px #ddd;
+      }
+    }
+  }
+}

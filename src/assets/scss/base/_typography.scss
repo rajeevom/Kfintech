@@ -1,0 +1,23 @@
+/*=================== Typography style ======================*/
+
+
+h1{
+    font-size: em(24px);
+    font-family: $ProximaNovaSB;
+   
+}
+h2{
+    font-size: em(28px);
+
+}
+
+
+@media only screen and (max-width: $sm)  {
+    h1{
+        font-size: em(20px);
+    }
+    p,li{
+        font-size: em(16px);
+    }
+}
+

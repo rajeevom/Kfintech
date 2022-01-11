@@ -1,0 +1,94 @@
+@import "base/variables";
+@import "base/fonts";
+@import "base/typography";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none !important;
+  font-family: $ProximaNovaR;
+}
+img {
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $ProximaNovaR;
+  font-size: em($defaultTextSize);
+  line-height: $defaultLineHeight;
+  color: $darkGrayColor;
+  background-color: #fff;
+  max-height: 100vh;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+}
+
+a {
+  color: $primaryTextColor;
+  text-decoration: none;
+  transition: all 0.3s linear;
+  outline: none !important;
+}
+input[type="submit"],
+button {
+  transition: all 0.3s linear;
+  outline: none !important;
+}
+a:hover {
+  color: $darkGrayColor;
+  text-decoration: none;
+  outline: none !important;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.pt0 {
+  padding-top: 0px !important;
+}
+.no-padding {
+  padding: 0;
+}
+
+.theme-color {
+  color: $primaryColor;
+}
+.green-color {
+  color: $gerrnColor;
+}
+.bold {
+  font-weight: bold;
+}
+
+body .red {
+  color: #eb5757 !important;
+}
+body .green {
+  color: #219653 !important;
+}
+
+@import "base/forms";
+@import "../components/btn";
+@import "../components/modal";
+// @import "../components/responsive-table";
+// @import "../components/progress-bar";

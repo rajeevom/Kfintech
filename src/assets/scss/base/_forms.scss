@@ -1,0 +1,58 @@
+@import "variables";
+
+/*=================== Forms style ======================*/
+
+%form-control {
+  border: solid 1px #cccccc !important;
+  padding: 10px !important;
+  font-size: em(16px);
+  border-radius: 0 !important;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 40px;
+  background-color: #fff !important;
+  &:focus {
+    box-shadow: none;
+  }
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  @extend %form-control;
+}
+
+input[type="text"]:disabled,
+input[type="time"]:disabled,
+input[type="url"]:disabled,
+input[type="week"]:disabled {
+  background-color: #f1f2f2 !important;
+  cursor: not-allowed;
+}
+
+textarea {
+  @extend %form-control;
+  height: 80px;
+}
+
+select {
+  @extend %form-control;
+  background: url("../images/expand_more.png") no-repeat 96% center;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: em(16px);
+  font-family: $ProximaNovaSB;
+  color: $darkGrayColor;
+  margin-bottom: 0px;
+}
+
+.error {
+  color: $redColor;
+  font-family: $ProximaNovaR;
+}

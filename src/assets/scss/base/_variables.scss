@@ -1,0 +1,60 @@
+// Colors Variables
+$primaryColor: #0069ff;
+$primaryTextColor: #2c98f0;
+$primaryHoverColor: #1e6eaf;
+$grayColor: #757575;
+$darkGrayColor: #4b4b4b;
+$whiteColor: #fff;
+
+$blueColor: #031B4D;
+
+
+
+$lightGrayColor: #9c9b9b;
+
+
+$lightPinkColor: #fff8fb;
+
+
+$blackColor: #000000;
+
+$orangeColor: #efad4d;
+$gerrnColor: #004a37;
+$darkGerrnColor: #00694e;
+$borderColor: #eaeaea;
+$redColor: #f82e2e;
+$yellowColor: #efad4d;
+$brownColor: #dc5250;
+$lightBlueColor: #f0fafd;
+$iconDarkColor: #8b8b8b;
+$iconLightColor: #e8e6e5;
+
+// Font Family Variables
+
+$ProximaNovaB: "ProximaNovaBold", sans-serif;
+$ProximaNovaSB: "ProximaNovaSbold", sans-serif;
+$ProximaNovaT: "ProximaNovaThin", sans-serif;
+$ProximaNovaR: "proxima_nova_regwebfont", sans-serif;
+
+$Roboto: "Roboto", sans-serif;
+
+// Text Variables
+
+$smallTextSize: 14px;
+$defaultTextSize: 16px;
+$defaultLineHeight: 22px;
+
+// Media Query Brack Points
+
+$desktop: 1170px;
+$lg: 992px;
+$md: 767px;
+$sm: 639px;
+$bs-sm: 576px;
+$xsm: 479px;
+$sm-360: 361px;
+
+// Px to em conversion
+@function em($pixels, $context: $defaultTextSize) {
+  @return ($pixels / $context) * 1em;
+}
